@@ -1,0 +1,109 @@
+
+<!--Mithun-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrailleMate - Conveter</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>BrailleMate Conveter</h1>
+
+        <div class="split-container">
+            <!-- How to Do It Section -->
+            <div class="how-to">
+                <h2>How to Use</h2>
+                <div class="step">
+                    <h3><span class="step-number">1</span> Choose Conversion Type</h3>
+                    <p>Select whether you want to convert from Braille to Text or Text to Braille. This determines the
+                        direction of conversion.</p>
+                </div>
+
+                <div class="step">
+                    <h3><span class="step-number">2</span> Upload Your Document</h3>
+                    <p>Click the "Upload Document" button to select your file.</p>
+                    <ul>
+                        <li>Images (.jpg, .png)</li>
+                        <li>Text documents (.txt)</li>
+                        <li>Word documents (.doc, .docx)</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h3><span class="step-number">3</span> Select Language</h3>
+                    <p>Choose the language of your document from the dropdown menu. This ensures accurate conversion.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <h3><span class="step-number">4</span> Convert</h3>
+                    <p>Accept the terms and conditions, then click "Convert Document" to start the conversion process.
+                    </p>
+                </div>
+            </div>
+
+            <!--Mithun-->
+            <!-- Converter Section -->
+            <div class="converter">
+                <div class="conversion-type">
+                    <label>
+                        <input type="radio" name="conversionType" value="brailleToText" checked>
+                        Braille to Text
+                    </label>
+                    <label>
+                        <input type="radio" name="conversionType" value="textToBraille">
+                        Text to Braille
+                    </label>
+                </div>
+
+                <div class="upload-section">
+                    <label for="imageUpload" class="upload-btn">Upload Document</label>
+                    <input type="file" id="imageUpload" accept="image/*,.txt,.doc,.docx" hidden>
+                    <div id="imagePreview">
+                        <p class="upload-placeholder">No file selected</p>
+                    </div>
+                    <button id="removeBtn" class="remove-btn" hidden>Remove File</button>
+                </div>
+
+                <select id="languageSelect">
+                    <option value="en">English</option>
+                    <option value="si">Sinhala</option>
+                </select>
+
+                <div class="terms-section">
+                    <label class="terms-checkbox">
+                        <input type="checkbox" id="termsAccepted">
+                        I accept the <button class="terms-link" id="termsBtn">terms and conditions</button>
+                    </label>
+                </div>
+
+                <button id="convertBtn" disabled>Convert Document</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Mithun-->
+    <!-- Terms Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Terms and Conditions</h2>
+            <div class="terms-text">
+                <p>1. By using BrailleMate, you agree to these terms and conditions.</p>
+                <p>2. The conversion service is provided as-is without any warranties.</p>
+                <p>3. You are responsible for ensuring you have the right to convert the documents.</p>
+                <p>4. Your privacy and data protection are important to us.</p>
+            </div>
+            <button id="acceptTerms" class="accept-btn">Accept Terms</button>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
